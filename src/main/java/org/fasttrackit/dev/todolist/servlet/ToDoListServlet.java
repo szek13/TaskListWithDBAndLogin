@@ -1,6 +1,7 @@
 package org.fasttrackit.dev.todolist.servlet;
 
 
+import org.fasttrackit.dev.todolist.AccessTaskList;
 import org.fasttrackit.dev.todolist.MyListOfToDoMock;
 import org.fasttrackit.dev.todolist.ToDoBean;
 
@@ -69,9 +70,15 @@ public class ToDoListServlet extends HttpServlet {
 
         // call db
 
-        MyListOfToDoMock myListObject = MyListOfToDoMock.getInstance();
-        myListObject.printList();
-        List<ToDoBean> l = myListObject.getList();
+//        MyListOfToDoMock myListObject = MyListOfToDoMock.getInstance();
+//        myListObject.printList();
+//        List<ToDoBean> l = myListObject.getList();
+
+
+        AccessTaskList atl = new AccessTaskList();
+        List<ToDoBean> l = atl.getTaskList();
+
+
 
         // put the list in a json
         JsonObjectBuilder jObjBuilder = Json.createObjectBuilder();

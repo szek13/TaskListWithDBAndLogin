@@ -7,10 +7,18 @@ package org.fasttrackit.dev.todolist;
 public class ToDoBean {
 
 
+    // to be used only when non db
     ToDoBean(int id, String value) {
         this.id=id;
         this.whatToDo=value;
         isDone=false;
+    }
+
+    // to be used by people accessing db
+    ToDoBean(int id, String value, boolean isDone) {
+        this.id=id;
+        this.whatToDo=value;
+        this.isDone=isDone;
     }
 
     public int getId() {
