@@ -116,7 +116,12 @@ public class ToDoListServlet extends HttpServlet {
 
         String idS = request.getParameter(ID_TASK);
         int id = Integer.parseInt(idS);
-        MyListOfToDoMock myListObject = MyListOfToDoMock.getInstance();
+        AccessTaskList atl = new AccessTaskList();
+        atl.markDone(id);
+
+
+
+      /*  MyListOfToDoMock myListObject = MyListOfToDoMock.getInstance();
 
         myListObject.printList();
 
@@ -130,7 +135,7 @@ public class ToDoListServlet extends HttpServlet {
                 element.setDone(true);
                 iterator.set(element);
             }
-        }
+        }       */
 
         System.out.println("i am done");
     }
@@ -144,10 +149,13 @@ public class ToDoListServlet extends HttpServlet {
         String value = request.getParameter(VALUE_NEWTASK);
 
 
-        MyListOfToDoMock myListObject = MyListOfToDoMock.getInstance();
-        myListObject.printList();
+     //   MyListOfToDoMock myListObject = MyListOfToDoMock.getInstance();
+     //   myListObject.printList();
 
-        myListObject.addItem(value);
+     //   myListObject.addItem(value);
+
+        AccessTaskList atl = new AccessTaskList();
+        atl.insertTaskList(value);
 
         System.out.println("now I am done");
 

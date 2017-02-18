@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TaskListWithDBAndLogin:war exploded">
+    <output-path>$PROJECT_DIR$/target/MyTaskList</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TaskListWithDBAndLogin" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.glassfish:javax.json:1.0.4" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.2-1003-jdbc4" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/MyTaskList/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="TaskListWithDBAndLogin/web/Web" />
+    </root>
+  </artifact>
+</component>
