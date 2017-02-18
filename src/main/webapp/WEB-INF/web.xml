@@ -6,15 +6,6 @@
     <display-name>MyTaskList</display-name>
 
 
-    <servlet>
-        <servlet-name>ToDoList</servlet-name>
-        <servlet-class>org.fasttrackit.dev.todolist.servlet.ToDoListServlet</servlet-class>
-    </servlet>
 
-
-    <servlet-mapping>
-        <servlet-name>ToDoList</servlet-name>
-        <url-pattern>/items</url-pattern>
-    </servlet-mapping>
 </web-app>
 
